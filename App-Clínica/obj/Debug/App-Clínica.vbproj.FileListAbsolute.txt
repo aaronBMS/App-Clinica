@@ -1,0 +1,14 @@
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\bin\Debug\App-Clínica.exe.config
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\bin\Debug\App-Clínica.exe
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\bin\Debug\App-Clínica.pdb
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\bin\Debug\App-Clínica.xml
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App-Clínica.vbprojAssemblyReference.cache
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.Login.resources
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.Resources.resources
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App-Clínica.vbproj.GenerateResource.cache
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App-Clínica.vbproj.CoreCompileInputs.cache
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App-Clínica.exe
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App-Clínica.xml
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App-Clínica.pdb
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.CrearUsuario.resources
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.MenuAdmin.resources
