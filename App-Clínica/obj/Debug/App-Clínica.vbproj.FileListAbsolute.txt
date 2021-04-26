@@ -35,3 +35,4 @@ C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\bin\Debug\System.Memory.xm
 C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App-Clínica.vbproj.CopyComplete
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.ConsultasUsuario.resources

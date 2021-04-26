@@ -14,7 +14,7 @@
         ImgStr = bytesToString(imageToBytes(Img))
 
         Try
-            Us.Ident = Convert.ToInt32(vTextID.Text)
+            Us.Ident = vTextID.Text
             Us.Name = vTextNombre.Text
             Us.LastName = vTextApellido.Text
             Us.Email = vTextCorreo.Text
@@ -31,6 +31,7 @@
             MsgBox("Error de Excepción: " + ex.ToString)
         End Try
         Limpiar()
+
     End Sub
 
     Private Sub vPictureFoto_Click(sender As Object, e As EventArgs) Handles vPictureFoto.Click
@@ -51,11 +52,16 @@
         vTextCorreo.Text = ""
         vComboCargo.Text = ""
         vTextUsuario.Text = ""
-        vTextContraseña.Text = ""
+        vTextContraseña.Text = Nothing
+        vPictureFoto.Image.Dispose()
         vPictureFoto.Image = Nothing
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Limpiar()
+    End Sub
+
+    Private Sub CrearUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

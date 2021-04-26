@@ -1,5 +1,5 @@
 ﻿Public Class Usuario
-    Dim ID As Integer
+    Dim ID As Char()
     Dim Nombre As String
     Dim Apellido As String
     Dim Correo As String
@@ -8,11 +8,11 @@
     Dim Contraseña As String
     Dim Foto As String
 
-    Public Property Ident As Integer
+    Public Property Ident As String
         Get
             Return ID
         End Get
-        Set(value As Integer)
+        Set(value As String)
             ID = value
         End Set
     End Property

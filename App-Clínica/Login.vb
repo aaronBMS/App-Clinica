@@ -8,15 +8,14 @@
         Else
             MsgBox("Datos Incorrectos")
         End If
+        Conex.Close()
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Conecction()
-        Dim Menu As MenuAdmin = New MenuAdmin
-        Menu.vLabelConectado.Text = Estado
     End Sub
 
     Private Sub Login_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-
+        Conex.Close()
     End Sub
 End Class

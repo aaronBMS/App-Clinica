@@ -58,13 +58,13 @@ Partial Class MenuAdmin
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(108, 22)
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(108, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'HerramientasToolStripMenuItem

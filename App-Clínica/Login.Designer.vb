@@ -99,7 +99,7 @@ Partial Class Login
         Me.vLabelTitulo.AutoSize = True
         Me.vLabelTitulo.BackColor = System.Drawing.Color.Transparent
         Me.vLabelTitulo.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelTitulo.Location = New System.Drawing.Point(33, 58)
+        Me.vLabelTitulo.Location = New System.Drawing.Point(33, 55)
         Me.vLabelTitulo.Name = "vLabelTitulo"
         Me.vLabelTitulo.Size = New System.Drawing.Size(334, 37)
         Me.vLabelTitulo.TabIndex = 0

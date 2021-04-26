@@ -120,6 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Conexion.vb" />
+    <Compile Include="Formularios\ConsultasUsuario.Designer.vb">
+      <DependentUpon>ConsultasUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ConsultasUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Datos\ModUsuario.vb" />
     <Compile Include="Formularios\CrearUsuario.Designer.vb">
       <DependentUpon>CrearUsuario.vb</DependentUpon>
@@ -158,6 +164,9 @@
     <Compile Include="Objetos\Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\ConsultasUsuario.resx">
+      <DependentUpon>ConsultasUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CrearUsuario.resx">
       <DependentUpon>CrearUsuario.vb</DependentUpon>
     </EmbeddedResource>

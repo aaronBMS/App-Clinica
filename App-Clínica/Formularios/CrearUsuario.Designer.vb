@@ -49,16 +49,18 @@ Partial Class CrearUsuario
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Leelawadee UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(267, 35)
+        Me.Label1.Font = New System.Drawing.Font("Leelawadee UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(205, 32)
+        Me.Label1.Size = New System.Drawing.Size(180, 30)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "CREAR USUARIO"
         '
         'vButtonSalir
         '
         Me.vButtonSalir.BackColor = System.Drawing.Color.LightCoral
+        Me.vButtonSalir.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.vButtonSalir.Location = New System.Drawing.Point(701, 0)
         Me.vButtonSalir.Name = "vButtonSalir"
         Me.vButtonSalir.Size = New System.Drawing.Size(69, 38)
@@ -70,8 +72,9 @@ Partial Class CrearUsuario
         '
         Me.vLabelID.AutoSize = True
         Me.vLabelID.BackColor = System.Drawing.Color.Transparent
-        Me.vLabelID.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelID.Location = New System.Drawing.Point(122, 82)
+        Me.vLabelID.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.vLabelID.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vLabelID.Location = New System.Drawing.Point(131, 70)
         Me.vLabelID.Name = "vLabelID"
         Me.vLabelID.Size = New System.Drawing.Size(22, 17)
         Me.vLabelID.TabIndex = 2
@@ -81,8 +84,9 @@ Partial Class CrearUsuario
         '
         Me.vLabelNombre.AutoSize = True
         Me.vLabelNombre.BackColor = System.Drawing.Color.Transparent
-        Me.vLabelNombre.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelNombre.Location = New System.Drawing.Point(122, 138)
+        Me.vLabelNombre.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.vLabelNombre.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vLabelNombre.Location = New System.Drawing.Point(131, 126)
         Me.vLabelNombre.Name = "vLabelNombre"
         Me.vLabelNombre.Size = New System.Drawing.Size(58, 17)
         Me.vLabelNombre.TabIndex = 3
@@ -92,8 +96,9 @@ Partial Class CrearUsuario
         '
         Me.vLabelApellido.AutoSize = True
         Me.vLabelApellido.BackColor = System.Drawing.Color.Transparent
-        Me.vLabelApellido.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelApellido.Location = New System.Drawing.Point(122, 196)
+        Me.vLabelApellido.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.vLabelApellido.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vLabelApellido.Location = New System.Drawing.Point(131, 184)
         Me.vLabelApellido.Name = "vLabelApellido"
         Me.vLabelApellido.Size = New System.Drawing.Size(60, 17)
         Me.vLabelApellido.TabIndex = 4
@@ -103,8 +108,9 @@ Partial Class CrearUsuario
         '
         Me.vLabelCorreo.AutoSize = True
         Me.vLabelCorreo.BackColor = System.Drawing.Color.Transparent
-        Me.vLabelCorreo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelCorreo.Location = New System.Drawing.Point(122, 252)
+        Me.vLabelCorreo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.vLabelCorreo.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vLabelCorreo.Location = New System.Drawing.Point(131, 240)
         Me.vLabelCorreo.Name = "vLabelCorreo"
         Me.vLabelCorreo.Size = New System.Drawing.Size(49, 17)
         Me.vLabelCorreo.TabIndex = 5
@@ -114,8 +120,9 @@ Partial Class CrearUsuario
         '
         Me.vLabelCargo.AutoSize = True
         Me.vLabelCargo.BackColor = System.Drawing.Color.Transparent
-        Me.vLabelCargo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelCargo.Location = New System.Drawing.Point(122, 312)
+        Me.vLabelCargo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.vLabelCargo.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vLabelCargo.Location = New System.Drawing.Point(131, 300)
         Me.vLabelCargo.Name = "vLabelCargo"
         Me.vLabelCargo.Size = New System.Drawing.Size(44, 17)
         Me.vLabelCargo.TabIndex = 6
@@ -123,32 +130,32 @@ Partial Class CrearUsuario
         '
         'vTextID
         '
-        Me.vTextID.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vTextID.Location = New System.Drawing.Point(125, 103)
+        Me.vTextID.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vTextID.Location = New System.Drawing.Point(134, 91)
         Me.vTextID.Name = "vTextID"
         Me.vTextID.Size = New System.Drawing.Size(235, 25)
         Me.vTextID.TabIndex = 7
         '
         'vTextNombre
         '
-        Me.vTextNombre.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vTextNombre.Location = New System.Drawing.Point(125, 158)
+        Me.vTextNombre.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vTextNombre.Location = New System.Drawing.Point(134, 146)
         Me.vTextNombre.Name = "vTextNombre"
         Me.vTextNombre.Size = New System.Drawing.Size(235, 25)
         Me.vTextNombre.TabIndex = 8
         '
         'vTextApellido
         '
-        Me.vTextApellido.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vTextApellido.Location = New System.Drawing.Point(125, 216)
+        Me.vTextApellido.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vTextApellido.Location = New System.Drawing.Point(134, 204)
         Me.vTextApellido.Name = "vTextApellido"
         Me.vTextApellido.Size = New System.Drawing.Size(235, 25)
         Me.vTextApellido.TabIndex = 9
         '
         'vTextCorreo
         '
-        Me.vTextCorreo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vTextCorreo.Location = New System.Drawing.Point(125, 272)
+        Me.vTextCorreo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vTextCorreo.Location = New System.Drawing.Point(134, 260)
         Me.vTextCorreo.Name = "vTextCorreo"
         Me.vTextCorreo.Size = New System.Drawing.Size(235, 25)
         Me.vTextCorreo.TabIndex = 10
@@ -156,8 +163,9 @@ Partial Class CrearUsuario
         'vLabelUsuario
         '
         Me.vLabelUsuario.AutoSize = True
-        Me.vLabelUsuario.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelUsuario.Location = New System.Drawing.Point(125, 373)
+        Me.vLabelUsuario.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.vLabelUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vLabelUsuario.Location = New System.Drawing.Point(134, 361)
         Me.vLabelUsuario.Name = "vLabelUsuario"
         Me.vLabelUsuario.Size = New System.Drawing.Size(55, 17)
         Me.vLabelUsuario.TabIndex = 13
@@ -166,8 +174,9 @@ Partial Class CrearUsuario
         'vLabelContraseña
         '
         Me.vLabelContraseña.AutoSize = True
-        Me.vLabelContraseña.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelContraseña.Location = New System.Drawing.Point(122, 432)
+        Me.vLabelContraseña.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.vLabelContraseña.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vLabelContraseña.Location = New System.Drawing.Point(131, 420)
         Me.vLabelContraseña.Name = "vLabelContraseña"
         Me.vLabelContraseña.Size = New System.Drawing.Size(77, 17)
         Me.vLabelContraseña.TabIndex = 14
@@ -175,16 +184,16 @@ Partial Class CrearUsuario
         '
         'vTextUsuario
         '
-        Me.vTextUsuario.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vTextUsuario.Location = New System.Drawing.Point(125, 393)
+        Me.vTextUsuario.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vTextUsuario.Location = New System.Drawing.Point(134, 381)
         Me.vTextUsuario.Name = "vTextUsuario"
         Me.vTextUsuario.Size = New System.Drawing.Size(235, 25)
         Me.vTextUsuario.TabIndex = 15
         '
         'vTextContraseña
         '
-        Me.vTextContraseña.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vTextContraseña.Location = New System.Drawing.Point(125, 452)
+        Me.vTextContraseña.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vTextContraseña.Location = New System.Drawing.Point(134, 440)
         Me.vTextContraseña.Name = "vTextContraseña"
         Me.vTextContraseña.Size = New System.Drawing.Size(235, 25)
         Me.vTextContraseña.TabIndex = 16
@@ -194,8 +203,9 @@ Partial Class CrearUsuario
         '
         Me.Button1.BackColor = System.Drawing.Color.OldLace
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(384, 373)
+        Me.Button1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button1.Location = New System.Drawing.Point(393, 361)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(234, 45)
         Me.Button1.TabIndex = 17
@@ -206,8 +216,9 @@ Partial Class CrearUsuario
         '
         Me.Button2.BackColor = System.Drawing.Color.OldLace
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(384, 432)
+        Me.Button2.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.Button2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button2.Location = New System.Drawing.Point(393, 420)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(234, 45)
         Me.Button2.TabIndex = 18
@@ -220,10 +231,10 @@ Partial Class CrearUsuario
         '
         'vComboCargo
         '
-        Me.vComboCargo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vComboCargo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
         Me.vComboCargo.FormattingEnabled = True
         Me.vComboCargo.Items.AddRange(New Object() {"Administrador", "Doctor", "Recepcionista", "Farmacéutica", "Atención al Cliente"})
-        Me.vComboCargo.Location = New System.Drawing.Point(125, 333)
+        Me.vComboCargo.Location = New System.Drawing.Point(134, 321)
         Me.vComboCargo.Name = "vComboCargo"
         Me.vComboCargo.Size = New System.Drawing.Size(235, 25)
         Me.vComboCargo.TabIndex = 19
@@ -234,7 +245,8 @@ Partial Class CrearUsuario
         Me.vPictureFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.vPictureFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.vPictureFoto.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.vPictureFoto.Location = New System.Drawing.Point(384, 103)
+        Me.vPictureFoto.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vPictureFoto.Location = New System.Drawing.Point(393, 91)
         Me.vPictureFoto.Name = "vPictureFoto"
         Me.vPictureFoto.Size = New System.Drawing.Size(234, 254)
         Me.vPictureFoto.TabIndex = 12

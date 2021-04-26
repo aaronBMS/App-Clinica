@@ -16,6 +16,7 @@ Module ModUsuario
             Comando.Parameters.AddWithValue("@CONTRASEÑA", User.Password)
             Comando.Parameters.AddWithValue("@FOTO", User.Photo)
             Comando.ExecuteNonQuery()
+            Conex.Close()
             Return True
         Catch ex As Exception
             Return False
@@ -63,5 +64,53 @@ Module ModUsuario
             Return False
         End Try
     End Function
+
+    Sub rellenarTabla()
+        Dim CU As ConsultasUsuario = New ConsultasUsuario
+        Try
+            Dim da As New SqlDataAdapter(“SELECT ID,NOMBRE,APELLIDO,CORREO,CARGO FROM USUARIOS”, Conex)
+            Dim ds As New DataSet
+            da.Fill(ds)
+            ConsultasUsuario.vDataTableUser.DataSource = ds.Tables(0)
+        Catch ex As Exception
+            MsgBox("Error")
+        End Try
+    End Sub
+
+    Sub ConsultarUsuario(ByVal Codigo As Char())
+        Try
+            Conex.Open()
+            Comando = New SqlClient.SqlCommand("SELECT * FROM USUARIOS WHERE ID='" + Codigo + "'", Conex)
+            Dim reader As SqlDataReader
+            reader = Comando.ExecuteReader
+            While reader.Read
+                ConsultasUsuario.vTextNombre.Text = reader.GetString(1)
+                ConsultasUsuario.vTextApellido.Text = reader.GetString(2)
+                ConsultasUsuario.vTextCorreo.Text = reader.GetString(3)
+                ConsultasUsuario.vComboCargo.SelectedItem = reader.GetString(4)
+                ConsultasUsuario.vTextUsuario.Text = reader.GetString(5)
+                ConsultasUsuario.vTextContraseña.Text = reader.GetString(6)
+            End While
+            ConsultasUsuario.vComboBuscar.Enabled = False
+            Conex.Close()
+        Catch ex As Exception
+            MsgBox("Error: " + ex.ToString)
+        End Try
+    End Sub
+
+    Sub RellenarComboBox()
+        Try
+            Conex.Open()
+            Comando = New SqlClient.SqlCommand("SELECT * FROM USUARIOS", Conex)
+            Dim reader As SqlDataReader
+            reader = Comando.ExecuteReader
+            While reader.Read
+                ConsultasUsuario.vComboBuscar.Items.Add(reader.GetString(0))
+            End While
+            Conex.Close()
+        Catch ex As Exception
+            MsgBox("Error: " + ex.ToString)
+        End Try
+    End Sub
 
 End Module
