@@ -10,4 +10,12 @@
         Me.Hide()
         Login.Show()
     End Sub
+
+    Private Sub MenuAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Conex.Close()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Hide()
+    End Sub
 End Class

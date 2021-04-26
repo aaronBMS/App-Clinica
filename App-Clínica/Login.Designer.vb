@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Login
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Login
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.vLabelUsuario = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -98,12 +98,12 @@ Partial Class Login
         '
         Me.vLabelTitulo.AutoSize = True
         Me.vLabelTitulo.BackColor = System.Drawing.Color.Transparent
-        Me.vLabelTitulo.Font = New System.Drawing.Font("Leelawadee UI", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelTitulo.Location = New System.Drawing.Point(66, 49)
+        Me.vLabelTitulo.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vLabelTitulo.Location = New System.Drawing.Point(33, 58)
         Me.vLabelTitulo.Name = "vLabelTitulo"
-        Me.vLabelTitulo.Size = New System.Drawing.Size(268, 50)
+        Me.vLabelTitulo.Size = New System.Drawing.Size(334, 37)
         Me.vLabelTitulo.TabIndex = 0
-        Me.vLabelTitulo.Text = "CLÍNICA LIMA"
+        Me.vLabelTitulo.Text = "CENTRO DE SALUD LIMA"
         '
         'Login
         '
@@ -120,7 +120,7 @@ Partial Class Login
         Me.Controls.Add(Me.vLabelTitulo)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Clínica Lima - Login"
+        Me.Text = "Centro de Salud Lima - Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

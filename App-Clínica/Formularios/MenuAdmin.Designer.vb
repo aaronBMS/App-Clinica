@@ -24,15 +24,17 @@ Partial Class MenuAdmin
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HerramientasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.vPanelOpciones = New System.Windows.Forms.Panel()
+        Me.vLabelConectado = New System.Windows.Forms.Label()
+        Me.vLabelEstado = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.vPanelAdmin = New System.Windows.Forms.Panel()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.vPanelOpciones.SuspendLayout()
         Me.SuspendLayout()
@@ -53,6 +55,18 @@ Partial Class MenuAdmin
         Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.InicioToolStripMenuItem.Text = "Inicio"
         '
+        'AyudaToolStripMenuItem
+        '
+        Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(108, 22)
+        Me.AyudaToolStripMenuItem.Text = "Ayuda"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(108, 22)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
         'HerramientasToolStripMenuItem
         '
         Me.HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
@@ -62,88 +76,98 @@ Partial Class MenuAdmin
         'vPanelOpciones
         '
         Me.vPanelOpciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.vPanelOpciones.Controls.Add(Me.vLabelConectado)
+        Me.vPanelOpciones.Controls.Add(Me.vLabelEstado)
         Me.vPanelOpciones.Controls.Add(Me.Button4)
         Me.vPanelOpciones.Controls.Add(Me.Button3)
         Me.vPanelOpciones.Controls.Add(Me.Button2)
         Me.vPanelOpciones.Controls.Add(Me.Button1)
         Me.vPanelOpciones.Location = New System.Drawing.Point(0, 27)
         Me.vPanelOpciones.Name = "vPanelOpciones"
-        Me.vPanelOpciones.Size = New System.Drawing.Size(289, 528)
+        Me.vPanelOpciones.Size = New System.Drawing.Size(290, 530)
         Me.vPanelOpciones.TabIndex = 1
+        '
+        'vLabelConectado
+        '
+        Me.vLabelConectado.AutoSize = True
+        Me.vLabelConectado.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vLabelConectado.Location = New System.Drawing.Point(51, 287)
+        Me.vLabelConectado.Name = "vLabelConectado"
+        Me.vLabelConectado.Size = New System.Drawing.Size(65, 15)
+        Me.vLabelConectado.TabIndex = 5
+        Me.vLabelConectado.Text = "Conectado"
+        '
+        'vLabelEstado
+        '
+        Me.vLabelEstado.AutoSize = True
+        Me.vLabelEstado.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vLabelEstado.Location = New System.Drawing.Point(8, 287)
+        Me.vLabelEstado.Name = "vLabelEstado"
+        Me.vLabelEstado.Size = New System.Drawing.Size(45, 15)
+        Me.vLabelEstado.TabIndex = 4
+        Me.vLabelEstado.Text = "Estado:"
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.Color.OldLace
-        Me.Button4.BackgroundImage = Global.App_Clínica.My.Resources.Resources.CrearUsuario
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(147, 398)
+        Me.Button4.Location = New System.Drawing.Point(3, 479)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(129, 99)
+        Me.Button4.Size = New System.Drawing.Size(283, 47)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Mi Perfil"
+        Me.Button4.Text = "Salir"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.OldLace
-        Me.Button3.BackgroundImage = Global.App_Clínica.My.Resources.Resources.CrearUsuario
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(12, 398)
+        Me.Button3.Location = New System.Drawing.Point(3, 430)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(129, 99)
+        Me.Button3.Size = New System.Drawing.Size(283, 47)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Asistencia"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.OldLace
-        Me.Button2.BackgroundImage = Global.App_Clínica.My.Resources.Resources.CrearUsuario
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(147, 284)
+        Me.Button2.Location = New System.Drawing.Point(3, 379)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(129, 99)
+        Me.Button2.Size = New System.Drawing.Size(283, 49)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Lista de Usuarios"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.OldLace
-        Me.Button1.BackgroundImage = Global.App_Clínica.My.Resources.Resources.CrearUsuario
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.Location = New System.Drawing.Point(12, 284)
+        Me.Button1.Location = New System.Drawing.Point(3, 325)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(129, 99)
+        Me.Button1.Size = New System.Drawing.Size(283, 52)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Crear Usuario"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'vPanelAdmin
         '
-        Me.vPanelAdmin.BackgroundImage = Global.App_Clínica.My.Resources.Resources.FondoPrincipal
+        Me.vPanelAdmin.BackgroundImage = Global.App_Clínica.My.Resources.Resources.FondoSec
         Me.vPanelAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.vPanelAdmin.Location = New System.Drawing.Point(288, 27)
+        Me.vPanelAdmin.Location = New System.Drawing.Point(290, 27)
         Me.vPanelAdmin.Name = "vPanelAdmin"
-        Me.vPanelAdmin.Size = New System.Drawing.Size(769, 528)
+        Me.vPanelAdmin.Size = New System.Drawing.Size(767, 530)
         Me.vPanelAdmin.TabIndex = 2
-        '
-        'SalirToolStripMenuItem
-        '
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.SalirToolStripMenuItem.Text = "Salir"
-        '
-        'AyudaToolStripMenuItem
-        '
-        Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'MenuAdmin
         '
@@ -157,10 +181,11 @@ Partial Class MenuAdmin
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MenuAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Clínica Lima - Menu"
+        Me.Text = "Centro de Salud Lima - Menu"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.vPanelOpciones.ResumeLayout(False)
+        Me.vPanelOpciones.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -177,4 +202,6 @@ Partial Class MenuAdmin
     Friend WithEvents vPanelAdmin As Panel
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents vLabelConectado As Label
+    Friend WithEvents vLabelEstado As Label
 End Class
