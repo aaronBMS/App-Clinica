@@ -139,6 +139,12 @@
     <Compile Include="Formularios\MenuAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\MenuAtencion.Designer.vb">
+      <DependentUpon>MenuAtencion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MenuAtencion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuAdmin.resx">
       <DependentUpon>MenuAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuAtencion.resx">
+      <DependentUpon>MenuAtencion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

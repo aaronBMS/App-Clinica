@@ -13,6 +13,8 @@
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Conecction()
+        vTextUsuario.Text = ""
+        vTextContraseña.Text = ""
     End Sub
 
     Private Sub Login_Closed(sender As Object, e As EventArgs) Handles Me.Closed

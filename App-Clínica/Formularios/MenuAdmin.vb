@@ -23,8 +23,6 @@
         Login.Show()
         Conex.Open()
         Dim Log As Login
-        Log.vTextUsuario.Text = ""
-        Log.vTextContraseña.Text = ""
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
