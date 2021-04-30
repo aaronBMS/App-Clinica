@@ -164,7 +164,7 @@ Partial Class MenuAtencion
         '
         Me.vPanelAdmin.BackgroundImage = Global.App_Clínica.My.Resources.Resources.FondoSec
         Me.vPanelAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.vPanelAdmin.Location = New System.Drawing.Point(290, 27)
+        Me.vPanelAdmin.Location = New System.Drawing.Point(290, 26)
         Me.vPanelAdmin.Name = "vPanelAdmin"
         Me.vPanelAdmin.Size = New System.Drawing.Size(767, 530)
         Me.vPanelAdmin.TabIndex = 4
@@ -178,6 +178,7 @@ Partial Class MenuAtencion
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.vPanelOpciones)
         Me.Name = "MenuAtencion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Centro de Salud Lima - Menu"
         Me.vPanelOpciones.ResumeLayout(False)
         Me.vPanelOpciones.PerformLayout()

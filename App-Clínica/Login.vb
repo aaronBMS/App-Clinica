@@ -1,13 +1,17 @@
 ﻿Public Class Login
     Private Sub vButtonIngresar_Click(sender As Object, e As EventArgs) Handles vButtonIngresar.Click
-        If validarUsuario(vTextUsuario.Text, vTextContraseña.Text) Then
-            MsgBox("Bienvenido")
-            Dim Menu As MenuAdmin = New MenuAdmin
-            Me.Hide()
-            Menu.Show()
-        Else
-            MsgBox("Datos Incorrectos")
-        End If
+        Select Case validarUsuario(vTextUsuario.Text, vTextContraseña.Text)
+            Case "Administrador"
+                Dim Menu As MenuAdmin = New MenuAdmin
+                MsgBox("Bienvenido")
+                Me.Hide()
+                Menu.Show()
+            Case "Atención al Cliente"
+                Dim Menu2 As MenuAtencion = New MenuAtencion
+                MsgBox("Bienvenido")
+                Me.Hide()
+                Menu2.Show()
+        End Select
         Conex.Close()
     End Sub
 

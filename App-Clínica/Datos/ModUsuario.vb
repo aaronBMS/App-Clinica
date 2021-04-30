@@ -52,16 +52,18 @@ Module ModUsuario
         Return arr
     End Function
 
-    Function validarUsuario(ByVal Usuario As String, ByVal Contra As String) As Boolean
+    Function validarUsuario(ByVal Usuario As String, ByVal Contra As String) As String
         Try
             Comando = New SqlClient.SqlCommand("SELECT * FROM USUARIO WHERE USUARIO='" + Usuario + "' AND CONTRASEÑA='" + Contra + "'", Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             If reader.HasRows <> False Then
-                Return True
+                While reader.Read
+                    Return reader.GetString(4)
+                End While
             End If
         Catch ex As Exception
-            Return False
+            Return MsgBox("Error: " + ex.ToString)
         End Try
     End Function
 

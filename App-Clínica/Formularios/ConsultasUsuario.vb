@@ -73,4 +73,8 @@ Public Class ConsultasUsuario
         rellenarTabla()
         vComboBuscar.Enabled = True
     End Sub
+
+    Private Sub vDataTableUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles vDataTableUser.CellContentClick
+
+    End Sub
 End Class

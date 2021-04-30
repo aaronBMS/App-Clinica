@@ -27,11 +27,6 @@ Partial Class ConsultasUsuario
         Me.vComboBuscar = New System.Windows.Forms.ComboBox()
         Me.vLabelID = New System.Windows.Forms.Label()
         Me.vButtonConsultar = New System.Windows.Forms.Button()
-        Me.vComboCargo = New System.Windows.Forms.ComboBox()
-        Me.vTextContraseña = New System.Windows.Forms.TextBox()
-        Me.vTextUsuario = New System.Windows.Forms.TextBox()
-        Me.vLabelContraseña = New System.Windows.Forms.Label()
-        Me.vLabelUsuario = New System.Windows.Forms.Label()
         Me.vTextCorreo = New System.Windows.Forms.TextBox()
         Me.vTextApellido = New System.Windows.Forms.TextBox()
         Me.vTextNombre = New System.Windows.Forms.TextBox()
@@ -42,6 +37,11 @@ Partial Class ConsultasUsuario
         Me.vButtonActualizar = New System.Windows.Forms.Button()
         Me.vButtonEliminar = New System.Windows.Forms.Button()
         Me.vButtonCancelar = New System.Windows.Forms.Button()
+        Me.vTextContraseña = New System.Windows.Forms.TextBox()
+        Me.vLabelContraseña = New System.Windows.Forms.Label()
+        Me.vTextUsuario = New System.Windows.Forms.TextBox()
+        Me.vLabelUsuario = New System.Windows.Forms.Label()
+        Me.vComboCargo = New System.Windows.Forms.ComboBox()
         CType(Me.vDataTableUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -98,55 +98,6 @@ Partial Class ConsultasUsuario
         Me.vButtonConsultar.TabIndex = 6
         Me.vButtonConsultar.Text = "Consultar"
         Me.vButtonConsultar.UseVisualStyleBackColor = False
-        '
-        'vComboCargo
-        '
-        Me.vComboCargo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
-        Me.vComboCargo.FormattingEnabled = True
-        Me.vComboCargo.Items.AddRange(New Object() {"Administrador", "Doctor", "Recepcionista", "Farmacéutica", "Atención al Cliente"})
-        Me.vComboCargo.Location = New System.Drawing.Point(331, 361)
-        Me.vComboCargo.Name = "vComboCargo"
-        Me.vComboCargo.Size = New System.Drawing.Size(200, 25)
-        Me.vComboCargo.TabIndex = 31
-        '
-        'vTextContraseña
-        '
-        Me.vTextContraseña.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
-        Me.vTextContraseña.Location = New System.Drawing.Point(334, 476)
-        Me.vTextContraseña.Name = "vTextContraseña"
-        Me.vTextContraseña.Size = New System.Drawing.Size(197, 25)
-        Me.vTextContraseña.TabIndex = 30
-        Me.vTextContraseña.UseSystemPasswordChar = True
-        '
-        'vTextUsuario
-        '
-        Me.vTextUsuario.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
-        Me.vTextUsuario.Location = New System.Drawing.Point(331, 419)
-        Me.vTextUsuario.Name = "vTextUsuario"
-        Me.vTextUsuario.Size = New System.Drawing.Size(200, 25)
-        Me.vTextUsuario.TabIndex = 29
-        '
-        'vLabelContraseña
-        '
-        Me.vLabelContraseña.AutoSize = True
-        Me.vLabelContraseña.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.vLabelContraseña.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.vLabelContraseña.Location = New System.Drawing.Point(331, 456)
-        Me.vLabelContraseña.Name = "vLabelContraseña"
-        Me.vLabelContraseña.Size = New System.Drawing.Size(77, 17)
-        Me.vLabelContraseña.TabIndex = 28
-        Me.vLabelContraseña.Text = "Contraseña"
-        '
-        'vLabelUsuario
-        '
-        Me.vLabelUsuario.AutoSize = True
-        Me.vLabelUsuario.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.vLabelUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.vLabelUsuario.Location = New System.Drawing.Point(331, 399)
-        Me.vLabelUsuario.Name = "vLabelUsuario"
-        Me.vLabelUsuario.Size = New System.Drawing.Size(55, 17)
-        Me.vLabelUsuario.TabIndex = 27
-        Me.vLabelUsuario.Text = "Usuario"
         '
         'vTextCorreo
         '
@@ -253,6 +204,55 @@ Partial Class ConsultasUsuario
         Me.vButtonCancelar.Text = "Cancelar"
         Me.vButtonCancelar.UseVisualStyleBackColor = False
         '
+        'vTextContraseña
+        '
+        Me.vTextContraseña.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vTextContraseña.Location = New System.Drawing.Point(334, 476)
+        Me.vTextContraseña.Name = "vTextContraseña"
+        Me.vTextContraseña.Size = New System.Drawing.Size(197, 25)
+        Me.vTextContraseña.TabIndex = 30
+        Me.vTextContraseña.UseSystemPasswordChar = True
+        '
+        'vLabelContraseña
+        '
+        Me.vLabelContraseña.AutoSize = True
+        Me.vLabelContraseña.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.vLabelContraseña.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vLabelContraseña.Location = New System.Drawing.Point(331, 456)
+        Me.vLabelContraseña.Name = "vLabelContraseña"
+        Me.vLabelContraseña.Size = New System.Drawing.Size(77, 17)
+        Me.vLabelContraseña.TabIndex = 28
+        Me.vLabelContraseña.Text = "Contraseña"
+        '
+        'vTextUsuario
+        '
+        Me.vTextUsuario.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vTextUsuario.Location = New System.Drawing.Point(331, 419)
+        Me.vTextUsuario.Name = "vTextUsuario"
+        Me.vTextUsuario.Size = New System.Drawing.Size(200, 25)
+        Me.vTextUsuario.TabIndex = 29
+        '
+        'vLabelUsuario
+        '
+        Me.vLabelUsuario.AutoSize = True
+        Me.vLabelUsuario.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.vLabelUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vLabelUsuario.Location = New System.Drawing.Point(331, 399)
+        Me.vLabelUsuario.Name = "vLabelUsuario"
+        Me.vLabelUsuario.Size = New System.Drawing.Size(55, 17)
+        Me.vLabelUsuario.TabIndex = 27
+        Me.vLabelUsuario.Text = "Usuario"
+        '
+        'vComboCargo
+        '
+        Me.vComboCargo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vComboCargo.FormattingEnabled = True
+        Me.vComboCargo.Items.AddRange(New Object() {"Administrador", "Doctor", "Recepcionista", "Farmacéutica", "Atención al Cliente"})
+        Me.vComboCargo.Location = New System.Drawing.Point(331, 361)
+        Me.vComboCargo.Name = "vComboCargo"
+        Me.vComboCargo.Size = New System.Drawing.Size(200, 25)
+        Me.vComboCargo.TabIndex = 31
+        '
         'ConsultasUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -292,11 +292,6 @@ Partial Class ConsultasUsuario
     Friend WithEvents vComboBuscar As ComboBox
     Friend WithEvents vLabelID As Label
     Friend WithEvents vButtonConsultar As Button
-    Friend WithEvents vComboCargo As ComboBox
-    Friend WithEvents vTextContraseña As TextBox
-    Friend WithEvents vTextUsuario As TextBox
-    Friend WithEvents vLabelContraseña As Label
-    Friend WithEvents vLabelUsuario As Label
     Friend WithEvents vTextCorreo As TextBox
     Friend WithEvents vTextApellido As TextBox
     Friend WithEvents vTextNombre As TextBox
@@ -307,4 +302,9 @@ Partial Class ConsultasUsuario
     Friend WithEvents vButtonActualizar As Button
     Friend WithEvents vButtonEliminar As Button
     Friend WithEvents vButtonCancelar As Button
+    Friend WithEvents vTextContraseña As TextBox
+    Friend WithEvents vLabelContraseña As Label
+    Friend WithEvents vTextUsuario As TextBox
+    Friend WithEvents vLabelUsuario As Label
+    Friend WithEvents vComboCargo As ComboBox
 End Class
