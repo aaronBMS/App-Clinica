@@ -1,5 +1,5 @@
 ﻿Public Class Usuario
-    Dim ID As Char()
+    Dim DNI As Char()
     Dim Nombre As String
     Dim Apellido As String
     Dim Correo As String
@@ -8,12 +8,12 @@
     Dim Contraseña As String
     Dim Foto As String
 
-    Public Property Ident As String
+    Public Property Ident As Char()
         Get
-            Return ID
+            Return DNI
         End Get
-        Set(value As String)
-            ID = value
+        Set(value As Char())
+            DNI = value
         End Set
     End Property
 

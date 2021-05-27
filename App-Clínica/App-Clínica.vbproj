@@ -140,6 +140,12 @@
     <Compile Include="Formularios\CrearUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\MenuDoctor.Designer.vb">
+      <DependentUpon>MenuDoctor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MenuDoctor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\RegistrarPaciente.Designer.vb">
       <DependentUpon>RegistrarPaciente.vb</DependentUpon>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ConsultasUsuario.resx">
       <DependentUpon>ConsultasUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuDoctor.resx">
+      <DependentUpon>MenuDoctor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RegistrarPaciente.resx">
       <DependentUpon>RegistrarPaciente.vb</DependentUpon>

@@ -6,7 +6,7 @@ Module ModUsuario
     Public Function CrearNuevoUsuario(ByVal User As Usuario) As Boolean
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("INSERT INTO USUARIO VALUES(@ID,@NOMBRE,@APELLIDO,@CORREO,@CARGO,@USUARIO,@CONTRASEÑA,@FOTO)", Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_InsertarUsuario @ID,@NOMBRE,@APELLIDO,@CORREO,@CARGO,@USUARIO,@CONTRASEÑA,@FOTO", Conex)
             Comando.Parameters.AddWithValue("@ID", User.Ident)
             Comando.Parameters.AddWithValue("@NOMBRE", User.Name)
             Comando.Parameters.AddWithValue("@APELLIDO", User.LastName)
@@ -19,7 +19,7 @@ Module ModUsuario
             Conex.Close()
             Return True
         Catch ex As Exception
-            Return False
+            MsgBox("Error: "+ex.ToString)
         End Try
     End Function
 
@@ -54,7 +54,7 @@ Module ModUsuario
 
     Function validarUsuario(ByVal Usuario As String, ByVal Contra As String) As String
         Try
-            Comando = New SqlClient.SqlCommand("SELECT * FROM USUARIO WHERE USUARIO='" + Usuario + "' AND CONTRASEÑA='" + Contra + "'", Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_ValidarUsuario " + Usuario + "," + Contra, Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             If reader.HasRows <> False Then
@@ -70,7 +70,7 @@ Module ModUsuario
     Sub rellenarTabla()
         Dim CU As ConsultasUsuario = New ConsultasUsuario
         Try
-            Dim da As New SqlDataAdapter(“SELECT ID,NOMBRE,APELLIDO,CORREO,CARGO FROM USUARIO”, Conex)
+            Dim da As New SqlDataAdapter(“EXECUTE SP_RellenarTablaUsuarios”, Conex)
             Dim ds As New DataSet
             da.Fill(ds)
             ConsultasUsuario.vDataTableUser.DataSource = ds.Tables(0)
@@ -82,7 +82,7 @@ Module ModUsuario
     Sub ConsultarUsuario(ByVal Codigo As Char())
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("SELECT * FROM USUARIO WHERE ID='" + Codigo + "'", Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_ConsultarUsuario " + Codigo, Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             While reader.Read
@@ -103,7 +103,7 @@ Module ModUsuario
     Sub RellenarComboBox()
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("SELECT * FROM USUARIO", Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_RellenarBoxUsuario", Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             While reader.Read
@@ -130,7 +130,7 @@ Module ModUsuario
     Public Function EliminarUsuario(ByVal Code As Char()) As Boolean
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("DELETE USUARIO WHERE ID=" + Code + "", Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_EliminarUsuario " + Code, Conex)
             Comando.ExecuteNonQuery()
             Conex.Close()
             Return True

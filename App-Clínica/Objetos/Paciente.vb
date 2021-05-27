@@ -1,17 +1,17 @@
 ﻿Public Class Paciente
-    Dim ID As Char()
+    Dim DNI_Paciente As Char()
     Dim Nombre As String
     Dim Apellido As String
     Dim Telefono As Integer
     Dim Correo As String
     Dim Foto As String
 
-    Public Property Ident As String
+    Public Property Ident As Char()
         Get
-            Return ID
+            Return DNI_Paciente
         End Get
-        Set(value As String)
-            ID = value
+        Set(value As Char())
+            DNI_Paciente = value
         End Set
     End Property
 

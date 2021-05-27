@@ -11,6 +11,11 @@
                 MsgBox("Bienvenido")
                 Me.Hide()
                 Menu2.Show()
+            Case "Doctor"
+                Dim Menu3 As MenuDoctor = New MenuDoctor
+                MsgBox("Bienvenido")
+                Me.Hide()
+                Menu3.Show()
         End Select
         Conex.Close()
     End Sub

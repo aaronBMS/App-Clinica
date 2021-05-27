@@ -39,3 +39,4 @@ C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.Con
 C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.MenuAtencion.resources
 C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.ConsultasPaciente.resources
 C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.RegistrarPaciente.resources
+C:\Users\Aaron\source\repos\App-Clínica\App-Clínica\obj\Debug\App_Clínica.MenuDoctor.resources
