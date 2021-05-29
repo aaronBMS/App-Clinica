@@ -6,7 +6,7 @@ Module ModUsuario
     Public Function CrearNuevoUsuario(ByVal User As Usuario) As Boolean
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("EXECUTE SP_InsertarUsuario @ID,@NOMBRE,@APELLIDO,@CORREO,@CARGO,@USUARIO,@CONTRASEÑA,@FOTO", Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_INSERTAR_USUARIO @ID,@NOMBRE,@APELLIDO,@CORREO,@CARGO,@USUARIO,@CONTRASEÑA,@FOTO", Conex)
             Comando.Parameters.AddWithValue("@ID", User.Ident)
             Comando.Parameters.AddWithValue("@NOMBRE", User.Name)
             Comando.Parameters.AddWithValue("@APELLIDO", User.LastName)
@@ -17,10 +17,10 @@ Module ModUsuario
             Comando.Parameters.AddWithValue("@FOTO", User.Photo)
             Comando.ExecuteNonQuery()
             Conex.Close()
-            Return True
         Catch ex As Exception
-            MsgBox("Error: "+ex.ToString)
+            MsgBox("Error: " + ex.ToString)
         End Try
+        Return True
     End Function
 
     Function bytesToString(ByVal arr As Byte()) As String
@@ -54,12 +54,12 @@ Module ModUsuario
 
     Function validarUsuario(ByVal Usuario As String, ByVal Contra As String) As String
         Try
-            Comando = New SqlClient.SqlCommand("EXECUTE SP_ValidarUsuario " + Usuario + "," + Contra, Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_VALIDAR_USUARIO " + Usuario + "," + Contra, Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             If reader.HasRows <> False Then
                 While reader.Read
-                    Return reader.GetString(4)
+                    Return reader.GetString(3)
                 End While
             End If
         Catch ex As Exception
@@ -70,7 +70,7 @@ Module ModUsuario
     Sub rellenarTabla()
         Dim CU As ConsultasUsuario = New ConsultasUsuario
         Try
-            Dim da As New SqlDataAdapter(“EXECUTE SP_RellenarTablaUsuarios”, Conex)
+            Dim da As New SqlDataAdapter(“EXECUTE SP_RELLENAR_USUARIO”, Conex)
             Dim ds As New DataSet
             da.Fill(ds)
             ConsultasUsuario.vDataTableUser.DataSource = ds.Tables(0)
@@ -82,7 +82,7 @@ Module ModUsuario
     Sub ConsultarUsuario(ByVal Codigo As Char())
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("EXECUTE SP_ConsultarUsuario " + Codigo, Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_CONSULTAR_USUARIO " + Codigo, Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             While reader.Read
@@ -103,7 +103,7 @@ Module ModUsuario
     Sub RellenarComboBox()
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("EXECUTE SP_RellenarBoxUsuario", Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_BOXUSUARIO", Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             While reader.Read
@@ -121,21 +121,67 @@ Module ModUsuario
             Comando = New SqlClient.SqlCommand("UPDATE USUARIO SET NOMBRE='" + User.Name + "',APELLIDO='" + User.LastName + "',CORREO='" + User.Email + "',CARGO='" + User.Work + "',USUARIO='" + User.User + "',CONTRASEÑA='" + User.Password + "' WHERE ID='" + Code + "'", Conex)
             Comando.ExecuteNonQuery()
             Conex.Close()
-            Return True
         Catch ex As Exception
             MsgBox("Error:" + ex.ToString)
         End Try
+        Return True
     End Function
 
     Public Function EliminarUsuario(ByVal Code As Char()) As Boolean
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("EXECUTE SP_EliminarUsuario " + Code, Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_ELIMAR_USAURIO " + Code, Conex)
             Comando.ExecuteNonQuery()
             Conex.Close()
-            Return True
         Catch ex As Exception
             MsgBox("Error:" + ex.ToString)
+        End Try
+        Return True
+    End Function
+
+    Public Function stringToByte(ByVal Usuario As String) As Byte()
+        Dim resultado As String = ""
+        Dim x As Integer = 0
+        Dim arreglo As Byte() = Nothing
+        Dim arregloTexto()
+
+        Try
+            Conex.Open()
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_FOTO_USUARIO " + Usuario, Conex)
+            Dim reader As SqlDataReader
+            reader = Comando.ExecuteReader
+            If reader.HasRows <> False Then
+                While reader.Read
+                    resultado = reader.Item("FOTO")
+                End While
+            End If
+
+            arregloTexto = resultado.Split(",")
+            ReDim arreglo(arregloTexto.Length - 1)
+
+            For x = 0 To arregloTexto.Length - 1
+                If arregloTexto(x).Equals("") = False Then
+                    arreglo(x) = arregloTexto(x)
+                End If
+            Next
+            Conex.Close()
+        Catch ex As Exception
+            MsgBox("Error")
+        End Try
+        Return arreglo
+    End Function
+
+    Public Function BytesToImage(ByVal Imagen As Byte()) As Image
+        Try
+            If Not Imagen Is Nothing Then
+                Dim Bin As New MemoryStream(Imagen)
+                Dim Resultado As Image = Image.FromStream(Bin)
+                Return Resultado
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            Return Nothing
         End Try
     End Function
 

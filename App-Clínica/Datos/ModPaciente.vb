@@ -5,7 +5,7 @@ Module ModPaciente
     Public Function CrearNuevoPaciente(ByVal Pacient As Paciente) As Boolean
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("INSERT INTO PACIENTE VALUES(@ID,@NOMBRE,@APELLIDO,@TELEFONO,@CORREO,@FOTO)", Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_INSERTAR_PACIENTE @ID,@NOMBRE,@APELLIDO,@TELEFONO,@CORREO,@FOTO", Conex)
             Comando.Parameters.AddWithValue("@ID", Pacient.Ident)
             Comando.Parameters.AddWithValue("@NOMBRE", Pacient.Name)
             Comando.Parameters.AddWithValue("@APELLIDO", Pacient.LastName)
@@ -23,7 +23,7 @@ Module ModPaciente
     Sub rellenarTablaPaciente()
         Dim CU As ConsultasPaciente = New ConsultasPaciente
         Try
-            Dim da As New SqlDataAdapter(“SELECT ID_PACIENTE,NOMBRE,APELLIDO,TELEFONO,CORREO FROM PACIENTE”, Conex)
+            Dim da As New SqlDataAdapter(“EXECUTE SP_RELLENAR_PACIENTE”, Conex)
             Dim ds As New DataSet
             da.Fill(ds)
             ConsultasPaciente.vDataTableUser.DataSource = ds.Tables(0)
@@ -35,7 +35,7 @@ Module ModPaciente
     Sub ConsultarPaciente(ByVal Codigo As Char())
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("SELECT * FROM PACIENTE WHERE ID_PACIENTE='" + Codigo + "'", Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_CONSULTAR_USUARIO " + Codigo, Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             While reader.Read
@@ -54,7 +54,7 @@ Module ModPaciente
     Sub RellenarComboBoxPaciente()
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("SELECT * FROM PACIENTE", Conex)
+            Comando = New SqlClient.SqlCommand("EXEC SP_BOXPACIENTE", Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             While reader.Read
@@ -72,10 +72,10 @@ Module ModPaciente
             Comando = New SqlClient.SqlCommand("UPDATE PACIENTE SET NOMBRE='" + Pacient.Name + "',APELLIDO='" + Pacient.LastName + "',TELEFONO=" + Pacient.Phone.ToString + ",CORREO='" + Pacient.Email + "' WHERE ID_PACIENTE='" + Code + "'", Conex)
             Comando.ExecuteNonQuery()
             Conex.Close()
-            Return True
         Catch ex As Exception
             MsgBox("Error:" + ex.ToString)
         End Try
+        Return True
     End Function
 
 End Module

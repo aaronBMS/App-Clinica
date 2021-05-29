@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MenuAdmin
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MenuAdmin
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -28,6 +28,7 @@ Partial Class MenuAdmin
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HerramientasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.vPanelOpciones = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.vLabelConectado = New System.Windows.Forms.Label()
         Me.vLabelEstado = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -37,6 +38,7 @@ Partial Class MenuAdmin
         Me.vPanelAdmin = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.vPanelOpciones.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -58,13 +60,13 @@ Partial Class MenuAdmin
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(108, 22)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(108, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'HerramientasToolStripMenuItem
@@ -76,6 +78,7 @@ Partial Class MenuAdmin
         'vPanelOpciones
         '
         Me.vPanelOpciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.vPanelOpciones.Controls.Add(Me.PictureBox1)
         Me.vPanelOpciones.Controls.Add(Me.vLabelConectado)
         Me.vPanelOpciones.Controls.Add(Me.vLabelEstado)
         Me.vPanelOpciones.Controls.Add(Me.Button4)
@@ -87,25 +90,32 @@ Partial Class MenuAdmin
         Me.vPanelOpciones.Size = New System.Drawing.Size(290, 530)
         Me.vPanelOpciones.TabIndex = 1
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(35, 35)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(217, 216)
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
         'vLabelConectado
         '
         Me.vLabelConectado.AutoSize = True
         Me.vLabelConectado.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelConectado.Location = New System.Drawing.Point(51, 287)
+        Me.vLabelConectado.Location = New System.Drawing.Point(124, 286)
         Me.vLabelConectado.Name = "vLabelConectado"
-        Me.vLabelConectado.Size = New System.Drawing.Size(65, 15)
+        Me.vLabelConectado.Size = New System.Drawing.Size(0, 15)
         Me.vLabelConectado.TabIndex = 5
-        Me.vLabelConectado.Text = "Conectado"
         '
         'vLabelEstado
         '
         Me.vLabelEstado.AutoSize = True
         Me.vLabelEstado.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelEstado.Location = New System.Drawing.Point(8, 287)
+        Me.vLabelEstado.Location = New System.Drawing.Point(13, 286)
         Me.vLabelEstado.Name = "vLabelEstado"
-        Me.vLabelEstado.Size = New System.Drawing.Size(45, 15)
+        Me.vLabelEstado.Size = New System.Drawing.Size(111, 15)
         Me.vLabelEstado.TabIndex = 4
-        Me.vLabelEstado.Text = "Estado:"
+        Me.vLabelEstado.Text = "Usuario Conectado:"
         '
         'Button4
         '
@@ -186,6 +196,7 @@ Partial Class MenuAdmin
         Me.MenuStrip1.PerformLayout()
         Me.vPanelOpciones.ResumeLayout(False)
         Me.vPanelOpciones.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -204,4 +215,5 @@ Partial Class MenuAdmin
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents vLabelConectado As Label
     Friend WithEvents vLabelEstado As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

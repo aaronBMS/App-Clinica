@@ -6,7 +6,7 @@ Module Conexion
     Public Comando As New SqlCommand
     Public Sub Conecction()
         Try
-            Conex.ConnectionString = "Data Source=DESKTOP-IL9RKGA;Initial Catalog=CLINICA_GDI;User ID=ucv;Password=ucv"
+            Conex.ConnectionString = "Data Source=DESKTOP-IL9RKGA;Initial Catalog=CLINICA;User ID=ucv;Password=ucv"
             Conex.Open()
         Catch ex As Exception
             MsgBox("Error")

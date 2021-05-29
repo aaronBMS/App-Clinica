@@ -119,6 +119,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLINICADataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CLINICADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos\Conexion.vb" />
     <Compile Include="Datos\ModPaciente.vb" />
     <Compile Include="Formularios\ConsultasPaciente.Designer.vb">
@@ -186,7 +191,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Objetos\Atencion_Cliente.vb" />
+    <Compile Include="Objetos\Cita.vb" />
+    <Compile Include="Objetos\Detalle_Cita.vb" />
+    <Compile Include="Objetos\Detalle_Historia.vb" />
+    <Compile Include="Objetos\Detalle_Receta.vb" />
+    <Compile Include="Objetos\Enfermera.vb" />
+    <Compile Include="Objetos\Doctor.vb" />
+    <Compile Include="Objetos\Historia.vb" />
+    <Compile Include="Objetos\Otro.vb" />
     <Compile Include="Objetos\Paciente.vb" />
+    <Compile Include="Objetos\Receta.vb" />
     <Compile Include="Objetos\Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +238,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="CLINICADataSet.xsc">
+      <DependentUpon>CLINICADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CLINICADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CLINICADataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CLINICADataSet.xss">
+      <DependentUpon>CLINICADataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

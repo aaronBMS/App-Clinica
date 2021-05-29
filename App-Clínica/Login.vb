@@ -17,6 +17,7 @@
                 Me.Hide()
                 Menu3.Show()
         End Select
+
         Conex.Close()
     End Sub
 
@@ -28,5 +29,9 @@
 
     Private Sub Login_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Conex.Close()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
