@@ -94,7 +94,7 @@ Partial Class MenuAdmin
         '
         Me.PictureBox1.Location = New System.Drawing.Point(35, 35)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(217, 216)
+        Me.PictureBox1.Size = New System.Drawing.Size(217, 224)
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
@@ -113,9 +113,9 @@ Partial Class MenuAdmin
         Me.vLabelEstado.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.vLabelEstado.Location = New System.Drawing.Point(13, 286)
         Me.vLabelEstado.Name = "vLabelEstado"
-        Me.vLabelEstado.Size = New System.Drawing.Size(111, 15)
+        Me.vLabelEstado.Size = New System.Drawing.Size(109, 15)
         Me.vLabelEstado.TabIndex = 4
-        Me.vLabelEstado.Text = "Usuario Conectado:"
+        Me.vLabelEstado.Text = "Usuario conectado:"
         '
         'Button4
         '

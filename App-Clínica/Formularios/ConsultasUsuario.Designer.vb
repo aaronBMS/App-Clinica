@@ -22,7 +22,9 @@ Partial Class ConsultasUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.vDataTableUser = New System.Windows.Forms.DataGridView()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.vComboBuscar = New System.Windows.Forms.ComboBox()
         Me.vLabelID = New System.Windows.Forms.Label()
@@ -42,18 +44,9 @@ Partial Class ConsultasUsuario
         Me.vTextUsuario = New System.Windows.Forms.TextBox()
         Me.vLabelUsuario = New System.Windows.Forms.Label()
         Me.vComboCargo = New System.Windows.Forms.ComboBox()
+        Me.vDataTableUser = New System.Windows.Forms.DataGridView()
         CType(Me.vDataTableUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'vDataTableUser
-        '
-        Me.vDataTableUser.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.vDataTableUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.vDataTableUser.Enabled = False
-        Me.vDataTableUser.Location = New System.Drawing.Point(114, 53)
-        Me.vDataTableUser.Name = "vDataTableUser"
-        Me.vDataTableUser.Size = New System.Drawing.Size(543, 219)
-        Me.vDataTableUser.TabIndex = 2
         '
         'Label1
         '
@@ -90,7 +83,7 @@ Partial Class ConsultasUsuario
         '
         'vButtonConsultar
         '
-        Me.vButtonConsultar.BackColor = System.Drawing.Color.OldLace
+        Me.vButtonConsultar.BackColor = System.Drawing.Color.LightCyan
         Me.vButtonConsultar.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.vButtonConsultar.Location = New System.Drawing.Point(273, 303)
         Me.vButtonConsultar.Name = "vButtonConsultar"
@@ -173,7 +166,7 @@ Partial Class ConsultasUsuario
         '
         'vButtonActualizar
         '
-        Me.vButtonActualizar.BackColor = System.Drawing.Color.OldLace
+        Me.vButtonActualizar.BackColor = System.Drawing.Color.LightCyan
         Me.vButtonActualizar.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.vButtonActualizar.Location = New System.Drawing.Point(552, 359)
         Me.vButtonActualizar.Name = "vButtonActualizar"
@@ -184,7 +177,7 @@ Partial Class ConsultasUsuario
         '
         'vButtonEliminar
         '
-        Me.vButtonEliminar.BackColor = System.Drawing.Color.OldLace
+        Me.vButtonEliminar.BackColor = System.Drawing.Color.LightCyan
         Me.vButtonEliminar.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.vButtonEliminar.Location = New System.Drawing.Point(552, 409)
         Me.vButtonEliminar.Name = "vButtonEliminar"
@@ -195,7 +188,7 @@ Partial Class ConsultasUsuario
         '
         'vButtonCancelar
         '
-        Me.vButtonCancelar.BackColor = System.Drawing.Color.OldLace
+        Me.vButtonCancelar.BackColor = System.Drawing.Color.LightCyan
         Me.vButtonCancelar.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.vButtonCancelar.Location = New System.Drawing.Point(552, 458)
         Me.vButtonCancelar.Name = "vButtonCancelar"
@@ -253,12 +246,54 @@ Partial Class ConsultasUsuario
         Me.vComboCargo.Size = New System.Drawing.Size(200, 25)
         Me.vComboCargo.TabIndex = 31
         '
+        'vDataTableUser
+        '
+        Me.vDataTableUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.vDataTableUser.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.vDataTableUser.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.vDataTableUser.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.vDataTableUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.vDataTableUser.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.vDataTableUser.ColumnHeadersHeight = 30
+        Me.vDataTableUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.vDataTableUser.EnableHeadersVisualStyles = False
+        Me.vDataTableUser.GridColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.vDataTableUser.Location = New System.Drawing.Point(90, 59)
+        Me.vDataTableUser.Name = "vDataTableUser"
+        Me.vDataTableUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.vDataTableUser.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.vDataTableUser.RowHeadersVisible = False
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightCyan
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        Me.vDataTableUser.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.vDataTableUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.vDataTableUser.Size = New System.Drawing.Size(594, 215)
+        Me.vDataTableUser.TabIndex = 35
+        '
         'ConsultasUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(769, 530)
+        Me.Controls.Add(Me.vDataTableUser)
         Me.Controls.Add(Me.vButtonCancelar)
         Me.Controls.Add(Me.vButtonEliminar)
         Me.Controls.Add(Me.vButtonActualizar)
@@ -278,7 +313,6 @@ Partial Class ConsultasUsuario
         Me.Controls.Add(Me.vLabelID)
         Me.Controls.Add(Me.vComboBuscar)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.vDataTableUser)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ConsultasUsuario"
         Me.Text = "ConsultasUsuario"
@@ -287,7 +321,6 @@ Partial Class ConsultasUsuario
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents vDataTableUser As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents vComboBuscar As ComboBox
     Friend WithEvents vLabelID As Label
@@ -307,4 +340,5 @@ Partial Class ConsultasUsuario
     Friend WithEvents vTextUsuario As TextBox
     Friend WithEvents vLabelUsuario As Label
     Friend WithEvents vComboCargo As ComboBox
+    Friend WithEvents vDataTableUser As DataGridView
 End Class

@@ -43,8 +43,6 @@ Public Class MenuAdmin
     End Sub
 
     Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
-
-
         'e.Graphics.SmoothingMode = SmoothingMode.AntiAlias
         'Dim p = New GraphicsPath
         'Dim x = 0

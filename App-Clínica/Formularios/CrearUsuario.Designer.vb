@@ -201,7 +201,7 @@ Partial Class CrearUsuario
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.OldLace
+        Me.Button1.BackColor = System.Drawing.Color.LightCyan
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
         Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -214,7 +214,7 @@ Partial Class CrearUsuario
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.OldLace
+        Me.Button2.BackColor = System.Drawing.Color.LightCyan
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
         Me.Button2.ImeMode = System.Windows.Forms.ImeMode.NoControl

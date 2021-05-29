@@ -82,16 +82,16 @@ Module ModUsuario
     Sub ConsultarUsuario(ByVal Codigo As Char())
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("EXECUTE SP_CONSULTAR_USUARIO " + Codigo, Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_LISTAUSUARIO_COMPLETA " + Codigo, Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             While reader.Read
-                ConsultasUsuario.vTextNombre.Text = reader.GetString(1)
-                ConsultasUsuario.vTextApellido.Text = reader.GetString(2)
-                ConsultasUsuario.vTextCorreo.Text = reader.GetString(3)
-                ConsultasUsuario.vComboCargo.SelectedItem = reader.GetString(4)
-                ConsultasUsuario.vTextUsuario.Text = reader.GetString(5)
-                ConsultasUsuario.vTextContraseña.Text = reader.GetString(6)
+                ConsultasUsuario.vTextNombre.Text = reader.GetString(0)
+                ConsultasUsuario.vTextApellido.Text = reader.GetString(1)
+                ConsultasUsuario.vTextCorreo.Text = reader.GetString(2)
+                ConsultasUsuario.vComboCargo.SelectedItem = reader.GetString(3)
+                ConsultasUsuario.vTextUsuario.Text = reader.GetString(4)
+                ConsultasUsuario.vTextContraseña.Text = reader.GetString(5)
             End While
             ConsultasUsuario.vComboBuscar.Enabled = False
             Conex.Close()
@@ -118,7 +118,7 @@ Module ModUsuario
     Public Function ActualizarUsuario(ByVal User As Usuario, ByVal Code As Char()) As Boolean
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("UPDATE USUARIO SET NOMBRE='" + User.Name + "',APELLIDO='" + User.LastName + "',CORREO='" + User.Email + "',CARGO='" + User.Work + "',USUARIO='" + User.User + "',CONTRASEÑA='" + User.Password + "' WHERE ID='" + Code + "'", Conex)
+            Comando = New SqlClient.SqlCommand("UPDATE USUARIO SET NOMBRE='" + User.Name + "',APELLIDO='" + User.LastName + "',CORREO='" + User.Email + "',CARGO='" + User.Work + "',USUARIO='" + User.User + "' WHERE DNI='" + Code + "'", Conex)
             Comando.ExecuteNonQuery()
             Conex.Close()
         Catch ex As Exception
@@ -130,7 +130,7 @@ Module ModUsuario
     Public Function EliminarUsuario(ByVal Code As Char()) As Boolean
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("EXECUTE SP_ELIMAR_USAURIO " + Code, Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_ELIMINAR_USUARIO " + Code, Conex)
             Comando.ExecuteNonQuery()
             Conex.Close()
         Catch ex As Exception

@@ -15,10 +15,6 @@ Public Class ConsultasUsuario
 
     End Sub
 
-    Private Sub ConsultasUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles vButtonConsultar.Click
         ConsultarUsuario(vComboBuscar.Text)
     End Sub
@@ -74,7 +70,15 @@ Public Class ConsultasUsuario
         vComboBuscar.Enabled = True
     End Sub
 
-    Private Sub vDataTableUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles vDataTableUser.CellContentClick
+    Private Sub vDataTableUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub ConsultasUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ConsultasUsuario_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
 
     End Sub
 End Class
