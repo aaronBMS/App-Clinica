@@ -25,6 +25,7 @@ Partial Class MenuAtencion
         Me.vPanelOpciones = New System.Windows.Forms.Panel()
         Me.vLabelConectado = New System.Windows.Forms.Label()
         Me.vLabelEstado = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -36,6 +37,7 @@ Partial Class MenuAtencion
         Me.HerramientasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.vPanelAdmin = New System.Windows.Forms.Panel()
         Me.vPanelOpciones.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,6 +46,7 @@ Partial Class MenuAtencion
         Me.vPanelOpciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.vPanelOpciones.Controls.Add(Me.vLabelConectado)
         Me.vPanelOpciones.Controls.Add(Me.vLabelEstado)
+        Me.vPanelOpciones.Controls.Add(Me.PictureBox1)
         Me.vPanelOpciones.Controls.Add(Me.Button4)
         Me.vPanelOpciones.Controls.Add(Me.Button3)
         Me.vPanelOpciones.Controls.Add(Me.Button2)
@@ -57,21 +60,28 @@ Partial Class MenuAtencion
         '
         Me.vLabelConectado.AutoSize = True
         Me.vLabelConectado.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelConectado.Location = New System.Drawing.Point(51, 287)
+        Me.vLabelConectado.Location = New System.Drawing.Point(132, 288)
         Me.vLabelConectado.Name = "vLabelConectado"
-        Me.vLabelConectado.Size = New System.Drawing.Size(65, 15)
-        Me.vLabelConectado.TabIndex = 5
-        Me.vLabelConectado.Text = "Conectado"
+        Me.vLabelConectado.Size = New System.Drawing.Size(0, 15)
+        Me.vLabelConectado.TabIndex = 9
         '
         'vLabelEstado
         '
         Me.vLabelEstado.AutoSize = True
         Me.vLabelEstado.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vLabelEstado.Location = New System.Drawing.Point(8, 287)
+        Me.vLabelEstado.Location = New System.Drawing.Point(21, 288)
         Me.vLabelEstado.Name = "vLabelEstado"
-        Me.vLabelEstado.Size = New System.Drawing.Size(45, 15)
-        Me.vLabelEstado.TabIndex = 4
-        Me.vLabelEstado.Text = "Estado:"
+        Me.vLabelEstado.Size = New System.Drawing.Size(109, 15)
+        Me.vLabelEstado.TabIndex = 8
+        Me.vLabelEstado.Text = "Usuario conectado:"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(33, 36)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(217, 224)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
         '
         'Button4
         '
@@ -182,6 +192,7 @@ Partial Class MenuAtencion
         Me.Text = "Centro de Salud Lima - Menu"
         Me.vPanelOpciones.ResumeLayout(False)
         Me.vPanelOpciones.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -190,8 +201,6 @@ Partial Class MenuAtencion
     End Sub
 
     Friend WithEvents vPanelOpciones As Panel
-    Friend WithEvents vLabelConectado As Label
-    Friend WithEvents vLabelEstado As Label
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
@@ -202,4 +211,7 @@ Partial Class MenuAtencion
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HerramientasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents vPanelAdmin As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents vLabelConectado As Label
+    Friend WithEvents vLabelEstado As Label
 End Class

@@ -3,29 +3,19 @@
 Public Class ConsultasUsuario
 
     Dim Us As New Usuario
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles vButtonConsultar.Click
-        ConsultarUsuario(vComboBuscar.Text)
+        ConsultarUsuario(vtxtBuscar.Text)
     End Sub
 
     Private Sub vButtonCancelar_Click(sender As Object, e As EventArgs) Handles vButtonCancelar.Click
         Limpiar()
-        vComboBuscar.Enabled = True
+        vtxtBuscar.Enabled = True
+        vtxtBuscar.Focus()
     End Sub
 
     Sub Limpiar()
-        vComboBuscar.Text = ""
+        vtxtBuscar.Text = ""
         vTextNombre.Text = ""
         vTextApellido.Text = ""
         vTextCorreo.Text = ""
@@ -42,7 +32,7 @@ Public Class ConsultasUsuario
             Us.Work = vComboCargo.Text
             Us.User = vTextUsuario.Text
             Us.Password = vTextContraseña.Text
-            If ActualizarUsuario(Us, vComboBuscar.Text) Then
+            If ActualizarUsuario(Us, vtxtBuscar.Text) Then
                 MsgBox("Usuario Actualizado")
             Else
                 MsgBox("Error al Actualizar")
@@ -52,12 +42,12 @@ Public Class ConsultasUsuario
         End Try
         Limpiar()
         rellenarTabla()
-        vComboBuscar.Enabled = True
+        vtxtBuscar.Enabled = True
     End Sub
 
     Private Sub vButtonEliminar_Click(sender As Object, e As EventArgs) Handles vButtonEliminar.Click
         Try
-            If EliminarUsuario(vComboBuscar.Text) Then
+            If EliminarUsuario(vtxtBuscar.Text) Then
                 MsgBox("Usuario Eliminado")
             Else
                 MsgBox("Error al Eliminar")
@@ -67,18 +57,14 @@ Public Class ConsultasUsuario
         End Try
         Limpiar()
         rellenarTabla()
-        vComboBuscar.Enabled = True
+        vtxtBuscar.Enabled = True
     End Sub
 
-    Private Sub vDataTableUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub ConsultasUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub ConsultasUsuario_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
-
+    Private Sub vtxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles vtxtBuscar.TextChanged
+        If (vtxtBuscar.Text <> "") Then
+            filtrarTablaUsuarios(vtxtBuscar.Text)
+        Else
+            rellenarTabla()
+        End If
     End Sub
 End Class

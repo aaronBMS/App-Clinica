@@ -35,8 +35,9 @@ Partial Class RegistrarPaciente
         Me.vLabelNombre = New System.Windows.Forms.Label()
         Me.vLabelID = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.vPictureFoto = New System.Windows.Forms.PictureBox()
         Me.vTextTelefono = New System.Windows.Forms.TextBox()
+        Me.vButtonSalir = New System.Windows.Forms.Button()
+        Me.vPictureFoto = New System.Windows.Forms.PictureBox()
         CType(Me.vPictureFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,7 +55,7 @@ Partial Class RegistrarPaciente
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.OldLace
+        Me.Button2.BackColor = System.Drawing.Color.LightCyan
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
         Me.Button2.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -67,7 +68,7 @@ Partial Class RegistrarPaciente
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.OldLace
+        Me.Button1.BackColor = System.Drawing.Color.LightCyan
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
         Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -174,6 +175,25 @@ Partial Class RegistrarPaciente
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'vTextTelefono
+        '
+        Me.vTextTelefono.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vTextTelefono.Location = New System.Drawing.Point(139, 342)
+        Me.vTextTelefono.Name = "vTextTelefono"
+        Me.vTextTelefono.Size = New System.Drawing.Size(235, 25)
+        Me.vTextTelefono.TabIndex = 36
+        '
+        'vButtonSalir
+        '
+        Me.vButtonSalir.BackColor = System.Drawing.Color.LightCoral
+        Me.vButtonSalir.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.vButtonSalir.Location = New System.Drawing.Point(701, -1)
+        Me.vButtonSalir.Name = "vButtonSalir"
+        Me.vButtonSalir.Size = New System.Drawing.Size(69, 38)
+        Me.vButtonSalir.TabIndex = 37
+        Me.vButtonSalir.Text = "Salir"
+        Me.vButtonSalir.UseVisualStyleBackColor = False
+        '
         'vPictureFoto
         '
         Me.vPictureFoto.BackColor = System.Drawing.Color.Gainsboro
@@ -187,19 +207,12 @@ Partial Class RegistrarPaciente
         Me.vPictureFoto.TabIndex = 29
         Me.vPictureFoto.TabStop = False
         '
-        'vTextTelefono
-        '
-        Me.vTextTelefono.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
-        Me.vTextTelefono.Location = New System.Drawing.Point(139, 342)
-        Me.vTextTelefono.Name = "vTextTelefono"
-        Me.vTextTelefono.Size = New System.Drawing.Size(235, 25)
-        Me.vTextTelefono.TabIndex = 36
-        '
         'RegistrarPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(769, 530)
+        Me.Controls.Add(Me.vButtonSalir)
         Me.Controls.Add(Me.vTextTelefono)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -238,4 +251,5 @@ Partial Class RegistrarPaciente
     Friend WithEvents vLabelID As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents vTextTelefono As TextBox
+    Friend WithEvents vButtonSalir As Button
 End Class

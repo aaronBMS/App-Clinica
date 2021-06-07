@@ -178,6 +178,7 @@ Partial Class MenuDoctor
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.vPanelOpciones)
         Me.Name = "MenuDoctor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Centro de Salud Lima - Menu"
         Me.vPanelOpciones.ResumeLayout(False)
         Me.vPanelOpciones.PerformLayout()

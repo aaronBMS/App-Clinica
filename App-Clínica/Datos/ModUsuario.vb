@@ -79,6 +79,18 @@ Module ModUsuario
         End Try
     End Sub
 
+    Function filtrarTablaUsuarios(ByVal ID As Char())
+        Dim CU As ConsultasUsuario = New ConsultasUsuario
+        Try
+            Dim da As New SqlDataAdapter(“EXECUTE SP_FILTRAR_USUARIO ” + ID, Conex)
+            Dim ds As New DataSet
+            da.Fill(ds)
+            ConsultasUsuario.vDataTableUser.DataSource = ds.Tables(0)
+        Catch ex As Exception
+            MsgBox("Error")
+        End Try
+    End Function
+
     Sub ConsultarUsuario(ByVal Codigo As Char())
         Try
             Conex.Open()
@@ -93,22 +105,7 @@ Module ModUsuario
                 ConsultasUsuario.vTextUsuario.Text = reader.GetString(4)
                 ConsultasUsuario.vTextContraseña.Text = reader.GetString(5)
             End While
-            ConsultasUsuario.vComboBuscar.Enabled = False
-            Conex.Close()
-        Catch ex As Exception
-            MsgBox("Error: " + ex.ToString)
-        End Try
-    End Sub
-
-    Sub RellenarComboBox()
-        Try
-            Conex.Open()
-            Comando = New SqlClient.SqlCommand("EXECUTE SP_BOXUSUARIO", Conex)
-            Dim reader As SqlDataReader
-            reader = Comando.ExecuteReader
-            While reader.Read
-                ConsultasUsuario.vComboBuscar.Items.Add(reader.GetString(0))
-            End While
+            ConsultasUsuario.vtxtBuscar.Enabled = False
             Conex.Close()
         Catch ex As Exception
             MsgBox("Error: " + ex.ToString)

@@ -2,7 +2,6 @@
 
 Public Class MenuAdmin
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ConsultasUsuario.vComboBuscar.Items.Clear()
         ConsultasUsuario.Hide()
         CrearUsuario.TopLevel = False
         CrearUsuario.Show()
@@ -20,7 +19,6 @@ Public Class MenuAdmin
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        ConsultasUsuario.vComboBuscar.Items.Clear()
         Me.Hide()
         Login.Show()
         Login.vTextUsuario.Text = ""
@@ -35,11 +33,10 @@ Public Class MenuAdmin
         ConsultasUsuario.Show()
         Me.vPanelAdmin.Controls.Add(ConsultasUsuario)
         rellenarTabla()
-        RellenarComboBox()
+        ConsultasUsuario.vtxtBuscar.Focus()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        ConsultasUsuario.vComboBuscar.Items.Clear()
     End Sub
 
     Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint

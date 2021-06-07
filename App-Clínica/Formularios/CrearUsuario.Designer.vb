@@ -61,7 +61,7 @@ Partial Class CrearUsuario
         '
         Me.vButtonSalir.BackColor = System.Drawing.Color.LightCoral
         Me.vButtonSalir.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.vButtonSalir.Location = New System.Drawing.Point(701, 0)
+        Me.vButtonSalir.Location = New System.Drawing.Point(701, -1)
         Me.vButtonSalir.Name = "vButtonSalir"
         Me.vButtonSalir.Size = New System.Drawing.Size(69, 38)
         Me.vButtonSalir.TabIndex = 1

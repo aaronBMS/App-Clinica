@@ -27,6 +27,7 @@ Module ModPaciente
             Dim ds As New DataSet
             da.Fill(ds)
             ConsultasPaciente.vDataTableUser.DataSource = ds.Tables(0)
+            RegistrarCita.vDataTablePaciente.DataSource = ds.Tables(0)
         Catch ex As Exception
             MsgBox("Error: " + ex.ToString)
         End Try
@@ -35,7 +36,7 @@ Module ModPaciente
     Sub ConsultarPaciente(ByVal Codigo As Char())
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("EXECUTE SP_CONSULTAR_USUARIO " + Codigo, Conex)
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_CONSULTAR_PACIENTE " + Codigo, Conex)
             Dim reader As SqlDataReader
             reader = Comando.ExecuteReader
             While reader.Read
@@ -44,22 +45,7 @@ Module ModPaciente
                 ConsultasPaciente.vTextTelefono.Text = reader.GetInt32(3)
                 ConsultasPaciente.vTextCorreo.Text = reader.GetString(4)
             End While
-            ConsultasPaciente.vComboBuscar.Enabled = False
-            Conex.Close()
-        Catch ex As Exception
-            MsgBox("Error: " + ex.ToString)
-        End Try
-    End Sub
-
-    Sub RellenarComboBoxPaciente()
-        Try
-            Conex.Open()
-            Comando = New SqlClient.SqlCommand("EXEC SP_BOXPACIENTE", Conex)
-            Dim reader As SqlDataReader
-            reader = Comando.ExecuteReader
-            While reader.Read
-                ConsultasPaciente.vComboBuscar.Items.Add(reader.GetString(0))
-            End While
+            ConsultasPaciente.vtxtBuscar.Enabled = False
             Conex.Close()
         Catch ex As Exception
             MsgBox("Error: " + ex.ToString)
@@ -69,13 +55,33 @@ Module ModPaciente
     Public Function ActualizarPaciente(ByVal Pacient As Paciente, ByVal Code As Char()) As Boolean
         Try
             Conex.Open()
-            Comando = New SqlClient.SqlCommand("UPDATE PACIENTE SET NOMBRE='" + Pacient.Name + "',APELLIDO='" + Pacient.LastName + "',TELEFONO=" + Pacient.Phone.ToString + ",CORREO='" + Pacient.Email + "' WHERE ID_PACIENTE='" + Code + "'", Conex)
+            Comando = New SqlClient.SqlCommand("UPDATE PACIENTE SET NOMBRE='" + Pacient.Name + "',APELLIDO='" + Pacient.LastName + "',TELEFONO=" + Pacient.Phone.ToString + ",CORREO='" + Pacient.Email + "' WHERE DNI_PACIENTE='" + Code + "'", Conex)
             Comando.ExecuteNonQuery()
             Conex.Close()
         Catch ex As Exception
             MsgBox("Error:" + ex.ToString)
         End Try
         Return True
+    End Function
+
+    Function filtrarTablaPacientes(ByVal ID As Char())
+        Dim CU As ConsultasUsuario = New ConsultasUsuario
+        Try
+            Conex.Open()
+            Dim da As New SqlDataAdapter(“EXECUTE SP_FILTRAR_PACIENTE ” + ID, Conex)
+            Dim ds As New DataSet
+            da.Fill(ds)
+            ConsultasPaciente.vDataTableUser.DataSource = ds.Tables(0)
+            RegistrarCita.vDataTablePaciente.DataSource = ds.Tables(0)
+            Dim reader As SqlDataReader
+            reader = da.SelectCommand.ExecuteReader
+            While reader.Read
+                RegistrarCita.vTextPaciente.Text = reader.GetString(1)
+            End While
+            Conex.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Function
 
 End Module

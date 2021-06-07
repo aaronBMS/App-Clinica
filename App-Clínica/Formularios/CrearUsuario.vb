@@ -30,6 +30,12 @@
         Catch ex As Exception
             MsgBox("Error de Excepción: " + ex.ToString)
         End Try
+
+        If vComboCargo.Text = "Doctor" Then
+            AdicionalDoctor.vEscondido.Text = vTextID.Text
+            AdicionalDoctor.Show()
+        End If
+
         Limpiar()
 
     End Sub
