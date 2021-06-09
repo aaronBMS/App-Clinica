@@ -1,7 +1,7 @@
 ﻿Public Class Detalle_Cita
     Dim ID_Cita As Char()
     Dim Especialidad As String
-    Dim Consultorio As Integer
+    Dim Consultorio As String
     Dim Turno As Integer
     Dim Costo As Double
 
@@ -23,11 +23,11 @@
         End Set
     End Property
 
-    Public Property Surgery As Integer
+    Public Property Surgery As String
         Get
             Return Consultorio
         End Get
-        Set(value As Integer)
+        Set(value As String)
             Consultorio = value
         End Set
     End Property

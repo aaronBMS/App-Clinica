@@ -1,4 +1,6 @@
-﻿Module ModCita
+﻿Imports System.Data.SqlClient
+
+Module ModCita
     Public Function RegistrarNuevaCita(ByVal Cita As Cita, ByVal DCita As Detalle_Cita) As Boolean
         Try
             Conex.Open()
@@ -16,7 +18,26 @@
             Conex.Close()
             Return True
         Catch ex As Exception
-            Return False
+            MsgBox(ex.Message)
+        End Try
+    End Function
+
+    Function ReportView_Cita(ByVal Codigo As Char())
+        Try
+            Conex.Open()
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_REPORT_VIEW " + Codigo, Conex)
+            Dim reader As SqlDataReader
+            reader = Comando.ExecuteReader
+            While reader.Read
+                Cita_Archivo.vTextSeñor.Text = reader.GetString(1).ToUpper + "," + reader.GetString(0).ToUpper
+                Cita_Archivo.vTextPaciente.Text = reader.GetString(1).ToUpper + "," + reader.GetString(0).ToUpper
+                Cita_Archivo.vTextTitular.Text = reader.GetString(1).ToUpper + "," + reader.GetString(0).ToUpper
+                Cita_Archivo.vTextEspecialidad.Text = reader.GetString(3).ToUpper
+                Cita_Archivo.vTextCodigo.Text = reader.GetString(2)
+            End While
+            Conex.Close()
+        Catch ex As Exception
+            MsgBox("Error: " + ex.ToString)
         End Try
     End Function
 

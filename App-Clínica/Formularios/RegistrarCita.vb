@@ -154,10 +154,6 @@
 
     End Sub
 
-    Private Sub vComboBoxDoctor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles vComboBoxDoctor.SelectedIndexChanged
-
-    End Sub
-
     Private Sub vTextID_TextChanged(sender As Object, e As EventArgs) Handles vtxtBuscar.TextChanged
         If vtxtBuscar.Text <> "" Then
             filtrarTablaPacientes(vtxtBuscar.Text)
@@ -169,13 +165,16 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            Ci.Ident = vTextCodigo.Text
+            Ci.Ident = vCodigo.Text
             Ci.Ident_Paciente = vtxtBuscar.Text
-            Ci.Ident_Doctor = vComboBoxDoctor.Text
-            Ci.Ident_Atencion = MenuAtencion.vLabelConectado.Text
+            Dim s As String = Microsoft.VisualBasic.Left(vComboBoxDoctor.Text, 8)
+            Ci.Ident_Doctor = s
+            Ci.Ident_Atencion = vLag.Text
             Ci.Datee = DateTime.Now
             Dci.Especiality = vComboEspecialidad.Text
             Dci.Surgery = vComboConsultorio.Text
+            Dci.Turn = Convert.ToInt32(vTextTurno.Text)
+            Dci.Cost = vTextCosto.Text
             If RegistrarNuevaCita(Ci, Dci) Then
                 MsgBox("Cita Registrada Correctamente")
             Else
@@ -184,6 +183,21 @@
         Catch ex As Exception
             MsgBox("Error de Excepción: " + ex.ToString)
         End Try
+        Cita_Archivo.Show()
     End Sub
 
+    Sub Limpiar()
+        vCodigo.Text = ""
+        vtxtBuscar.Text = ""
+        vComboBoxDoctor.Text = ""
+        vComboEspecialidad.Text = ""
+        vComboConsultorio.Text = ""
+        vTextTurno.Text = ""
+        vTextCosto.Text = ""
+        vCodigo.Focus()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Limpiar()
+    End Sub
 End Class

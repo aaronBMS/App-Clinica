@@ -22,9 +22,9 @@ Partial Class RegistrarCita
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.vTextTurno = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -44,8 +44,9 @@ Partial Class RegistrarCita
         Me.vTextCosto = New System.Windows.Forms.TextBox()
         Me.vTextPaciente = New System.Windows.Forms.TextBox()
         Me.vDataTablePaciente = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.vCodigo = New System.Windows.Forms.TextBox()
         Me.vTextCodigo = New System.Windows.Forms.Label()
+        Me.vLag = New System.Windows.Forms.Label()
         CType(Me.vDataTablePaciente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -249,14 +250,14 @@ Partial Class RegistrarCita
         Me.vDataTablePaciente.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.vDataTablePaciente.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.vDataTablePaciente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.vDataTablePaciente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.vDataTablePaciente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.vDataTablePaciente.ColumnHeadersHeight = 30
         Me.vDataTablePaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.vDataTablePaciente.EnableHeadersVisualStyles = False
@@ -264,32 +265,32 @@ Partial Class RegistrarCita
         Me.vDataTablePaciente.Location = New System.Drawing.Point(74, 68)
         Me.vDataTablePaciente.Name = "vDataTablePaciente"
         Me.vDataTablePaciente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.vDataTablePaciente.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.vDataTablePaciente.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.vDataTablePaciente.RowHeadersVisible = False
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.LightCyan
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSkyBlue
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        Me.vDataTablePaciente.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightCyan
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        Me.vDataTablePaciente.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.vDataTablePaciente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.vDataTablePaciente.Size = New System.Drawing.Size(619, 218)
         Me.vDataTablePaciente.TabIndex = 59
         '
-        'TextBox1
+        'vCodigo
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
-        Me.TextBox1.Location = New System.Drawing.Point(500, 37)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(195, 25)
-        Me.TextBox1.TabIndex = 61
+        Me.vCodigo.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.vCodigo.Location = New System.Drawing.Point(500, 37)
+        Me.vCodigo.Name = "vCodigo"
+        Me.vCodigo.Size = New System.Drawing.Size(168, 25)
+        Me.vCodigo.TabIndex = 61
         '
         'vTextCodigo
         '
@@ -303,13 +304,22 @@ Partial Class RegistrarCita
         Me.vTextCodigo.TabIndex = 60
         Me.vTextCodigo.Text = "Código"
         '
+        'vLag
+        '
+        Me.vLag.AutoSize = True
+        Me.vLag.Location = New System.Drawing.Point(13, 331)
+        Me.vLag.Name = "vLag"
+        Me.vLag.Size = New System.Drawing.Size(0, 13)
+        Me.vLag.TabIndex = 62
+        '
         'RegistrarCita
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(769, 530)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.vLag)
+        Me.Controls.Add(Me.vCodigo)
         Me.Controls.Add(Me.vTextCodigo)
         Me.Controls.Add(Me.vDataTablePaciente)
         Me.Controls.Add(Me.vTextPaciente)
@@ -358,6 +368,7 @@ Partial Class RegistrarCita
     Friend WithEvents vTextCosto As TextBox
     Friend WithEvents vTextPaciente As TextBox
     Friend WithEvents vDataTablePaciente As DataGridView
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents vCodigo As TextBox
     Friend WithEvents vTextCodigo As Label
+    Friend WithEvents vLag As Label
 End Class

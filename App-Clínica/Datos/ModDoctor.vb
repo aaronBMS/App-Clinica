@@ -31,4 +31,18 @@ Module ModDoctor
         End Try
     End Function
 
+    Function ConsultarDoctor(ByVal Codigo As Char())
+        Try
+            Conex.Open()
+            Comando = New SqlClient.SqlCommand("EXECUTE SP_CONSULTAR_DOCTOR " + Codigo, Conex)
+            Dim reader As SqlDataReader
+            reader = Comando.ExecuteReader
+            While reader.Read
+                Cita_Archivo.vTextMedico.Text = reader.GetString(1).ToUpper + "," + reader.GetString(0).ToUpper
+            End While
+            Conex.Close()
+        Catch ex As Exception
+            MsgBox("Error: " + ex.ToString)
+        End Try
+    End Function
 End Module
